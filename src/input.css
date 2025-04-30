@@ -12,19 +12,28 @@
 @layer base{
     * {
         font-family: 'Lato';
+        scroll-behavior: smooth;
+        translate: 0.3s;
     }
     .nav-item{
         @apply px-8 py-2  hover:bg-[#334561] rounded-md whitespace-nowrap;
     }
     .card{
-        @apply flex-1 flex flex-col bg-[rgba(40,40,59,0.05)] p-12 justify-between
+        @apply flex-1 flex flex-col lg:bg-[rgba(40,40,59,0.05)] p-12 justify-between
+    }
+    .card img{
+        @apply order-1 lg:order-0 self-center lg:self-start;
     }
     .card h2{
-        @apply text-deep-purple font-bitter text-xl font-bold 
+        @apply order-0 lg:order-1 text-center lg:text-left text-deep-purple font-bitter text-xl font-bold 
     }
     .card p{
-        @apply text-lg
+        @apply order-2 text-lg my-8 mx-4 md:mx-6 lg:m-0;
     }
+    .card a, button{
+        @apply order-3 rounded-sm bg-[#233e5d] font-bitter text-white w-fit px-8 py-3 text-lg self-center lg:self-start 
+    }
+    
     input, select, textarea{
         @apply bg-white my-2 border border-gray-300 placeholder-gray-400 rounded-sm p-2 w-full
     }
@@ -39,6 +48,9 @@
     }
     li{
         @apply text-lg
+    }
+    iframe{
+        @apply w-[90%] aspect-video mx-auto
     }
 }
 
