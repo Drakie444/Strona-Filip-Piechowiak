@@ -787,6 +787,11 @@
       margin-top: calc(var(--spacing) * 16);
     }
   }
+  .md\:mt-20 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 20);
+    }
+  }
   .md\:mt-30 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 30);
