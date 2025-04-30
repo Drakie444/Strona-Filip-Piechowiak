@@ -395,6 +395,9 @@
   .grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
+  .grid-rows-\[auto_auto_auto\] {
+    grid-template-rows: auto auto auto;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -442,20 +445,6 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 20) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 20) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
-  .space-x-0 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 0) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 0) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
-  .space-x-0\.5 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 0.5) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 0.5) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
   .space-x-2 {
@@ -733,6 +722,11 @@
       top: calc(var(--spacing) * 3);
     }
   }
+  .md\:top-5 {
+    @media (width >= 48rem) {
+      top: calc(var(--spacing) * 5);
+    }
+  }
   .md\:top-10 {
     @media (width >= 48rem) {
       top: calc(var(--spacing) * 10);
@@ -863,6 +857,11 @@
       max-width: calc(var(--spacing) * 300);
     }
   }
+  .md\:max-w-none {
+    @media (width >= 48rem) {
+      max-width: none;
+    }
+  }
   .md\:flex-1\/2 {
     @media (width >= 48rem) {
       flex: calc(1/2 * 100%);
@@ -958,6 +957,11 @@
       padding-inline: calc(var(--spacing) * 5);
     }
   }
+  .md\:px-20 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
   .md\:px-30 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 30);
@@ -980,9 +984,19 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .md\:text-\[27px\] {
+    @media (width >= 48rem) {
+      font-size: 27px;
+    }
+  }
   .md\:text-\[32px\] {
     @media (width >= 48rem) {
       font-size: 32px;
+    }
+  }
+  .md\:text-\[33px\] {
+    @media (width >= 48rem) {
+      font-size: 33px;
     }
   }
   .lg\:min-h-\[600px\] {
